@@ -6,8 +6,6 @@ import (
 	"time"
 )
 
-var _ = time.Thursday
-
 const (
 	TEST_EVENT = "test.event"
 )
