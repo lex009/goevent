@@ -18,7 +18,7 @@ type Dispatcher struct {
 // Type for listening function.
 type ListenerFunc func(e Event, quit chan int)
 
-// Interface for liseners.
+// Interface for listeners.
 type Listener interface {
 	Execute(event Event, quit chan int)
 }
@@ -50,7 +50,7 @@ func (d *Dispatcher) Listener(event string, l Listener) {
 //      //... do some stuff
 //
 //      q <- 1 // if you'd like to let your main gouroutine wait for this function
-//             // to be executed, pass int to the channel after all manupilations
+//             // to be executed, pass int to the channel after all manipulations
 //             // inside the function
 //   })
 func (d *Dispatcher) ListenerFunc(event string, l ListenerFunc) {
